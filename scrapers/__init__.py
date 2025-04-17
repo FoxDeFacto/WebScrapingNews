@@ -4,6 +4,7 @@ Scraper factory module.
 from core.models import NewsSource
 from .novinky_scraper import NovinkyScraper
 from .pravda_scraper import PravdaScraper
+from .guardian_scraper import GuardianScraper
 
 
 def get_scraper_for_source(source: NewsSource):
@@ -23,6 +24,7 @@ def get_scraper_for_source(source: NewsSource):
     scraper_map = {
         'novinky': NovinkyScraper,
         'pravda': PravdaScraper,
+        'guardian':GuardianScraper
     }
     
     # Get the scraper class based on the source slug

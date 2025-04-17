@@ -132,6 +132,7 @@ SWAGGER_SETTINGS = {
 }
 
 # Scraper settings
+# Scraper settings
 SCRAPER_CONFIG = {
     'novinky': {
         'base_url': 'https://www.novinky.cz/',
@@ -142,6 +143,14 @@ SCRAPER_CONFIG = {
     },
     'pravda': {
         'base_url': 'https://www.pravda.com.ua/',
+    },
+    'guardian': {
+        'base_url': 'https://www.theguardian.com/europe',
+        'sections_of_interest': [
+            'europe',
+            'technology',
+            'business'
+        ],
     },
 }
 

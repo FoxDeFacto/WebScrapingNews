@@ -71,7 +71,17 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
-### 6. Run the Development Server
+### 6. To get data
+
+```bash
+# Register sources
+python manage.py add_sources
+
+# To reset scrapet data
+python manage.py reset_db
+```
+
+### 7. Run the Development Server
 ```bash
 python manage.py runserver
 ```
@@ -82,6 +92,7 @@ python manage.py runserver
 Configure news sources in `settings.py` under the `SCRAPER_CONFIG` section:
 
 ```python
+# Scraper settings
 SCRAPER_CONFIG = {
     'novinky': {
         'base_url': 'https://www.novinky.cz/',
@@ -92,6 +103,14 @@ SCRAPER_CONFIG = {
     },
     'pravda': {
         'base_url': 'https://www.pravda.com.ua/',
+    },
+    'guardian': {
+        'base_url': 'https://www.theguardian.com/europe',
+        'sections_of_interest': [
+            'europe',
+            'technology',
+            'business'
+        ],
     },
 }
 ```

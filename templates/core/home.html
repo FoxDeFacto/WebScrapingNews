@@ -97,7 +97,9 @@
                         {% if article.image_url %}
                         <img src="{{ article.image_url }}" class="article-image" alt="{{ article.title }}">
                         {% elif article.source.slug == 'pravda' %}
-                        <img src="{% static 'images/pravda.png' %}" class="article-image" alt="Default image for Pravda">                    
+                        <img src="{% static 'images/pravda.png' %}" class="article-image" alt="Default image for Pravda">
+                        {% elif article.source.slug == 'guardian' %}
+                        <img src="{% static 'images/guardian.jpg' %}" class="article-image" alt="Default image for Guardian">                    
                         {% else %}
                             <div class="article-image bg-gray-100 flex items-center justify-center">
                                 <span class="text-gray-400">No image</span>
